@@ -1,6 +1,7 @@
 /*
-	This program compares the analog output of a thermistor voltage divider and a DHT11
-	The program was written to verify accurate temperature readings by taking more
+	This program compares the analog output of a thermistor voltage divider and a DHT11.
+	The program was written to verify accurate temperature readings by taking more than
+	one input reading.
 */
 
 //include LiquidCrystal library

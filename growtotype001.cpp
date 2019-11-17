@@ -1,6 +1,8 @@
 #include <DHT.h>			// Temp and humidity sensor library
 #include <Wire.h>			// RTC library
 #include <LiquidCrystal.h>	// LCD library
+#include <SD.h>				// SD card library
+#include <SPI.h>			// SPI Communication library
 
 #define DHTPIN			// STILL NEED TO ADD PIN NUMBER
 #define DHTTYPE DHT11	// Sets the DHT sensor type

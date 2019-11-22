@@ -21,6 +21,7 @@ int greenValue;
 int blueValue;
 
 void setup() {
+  
   // sets RGB LED pins as OUTPUT on digital PWM pins
   pinMode(redLight, OUTPUT);
   pinMode(greenLight, OUTPUT);
@@ -29,9 +30,13 @@ void setup() {
   // initialize serial @ 9600baud
   Serial.begin(9600);
   Serial.print('RGB LED controller');
+
+  // delay before stream of RGB values
+  delay(1000);
 }
 
 void loop() {
+  
   // reads the values of the color potentiometers and
   // sets it as the value of the corresponding placeholder
   redValue = analogRead(redPot);

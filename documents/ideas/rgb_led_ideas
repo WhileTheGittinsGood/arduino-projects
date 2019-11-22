@@ -1,0 +1,27 @@
+fuse 5v connections from power supply:
+	20 AWG max current = ~1.5A
+	18 AWG max current = ~2.3A
+
+
+
+set bottom half of a vertically mounted rgb led strip to a user defined color
+and gradually reduce the saturation of that user defined color in the top half
+fade from user defined color to white at the highest LED
+
+use three potentiometers to control hue (0-255), saturation (0-255), value (0-255)
+or use a fourth to control the LED that starts the fade to white
+
+-start with the values of the three potentiometers
+
+-assign the value of potentiometer to the first led 
+ or first half of the strip or LED defined by potentiometer
+
+-loop while there are LEDs remaining
+	-take the saturation value and and increment it by a negative value
+		-hue and value potentiometer values will remain the same
+	-assign the new adjusted values to the next LED
+
+
+
+use light color sensor to determine ambient light color and set it to
+the hue value of LED strip

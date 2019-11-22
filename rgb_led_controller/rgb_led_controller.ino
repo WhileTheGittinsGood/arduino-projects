@@ -1,5 +1,5 @@
-// I wrote this program to conceptualize a way to control any
-// type of RGB LED using potentiometers to adjust individual
+// I wrote this program to conceptualize a way to control a
+// 3 pin RGB LED using potentiometers to adjust individual
 // RGB values.
 //
 //

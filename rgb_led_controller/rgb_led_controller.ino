@@ -7,13 +7,13 @@
 // initializes three potentiometers on analog pins
 // to control RGB levels
 int redPot = A0;
-int greenPot = A1;
-int bluePot = A2;
+int greenPot = A3;
+int bluePot = A6;
 
 // initializes three RGB LED pins on digital PWM pins
 int redLight = 9;
-int greenLight = 10;
-int blueLight = 11;
+int greenLight = 6;
+int blueLight = 3;
 
 // creates some placeholders for to store color values
 int redValue;
@@ -29,7 +29,7 @@ void setup() {
 
   // initialize serial @ 9600baud
   Serial.begin(9600);
-  Serial.print('RGB LED controller');
+  Serial.print("RGB LED controller");
 
   // delay before stream of RGB values
   delay(1000);
@@ -43,10 +43,10 @@ void loop() {
   greenValue = analogRead(greenPot);
   blueValue = analogRead(bluePot);
 
-  // maps the analog read value to 0-255
-  redValue = map(redValue, 0, 800, 0, 255);
-  greenValue = map(greenValue, 0, 800, 0, 255);
-  blueValue = map(blueValue, 0, 800, 0, 255);
+  // maps analog read values to 0-255
+  redValue = map(redValue, 0, 690, 0, 255);
+  greenValue = map(greenValue, 0, 690, 0, 255);
+  blueValue = map(blueValue, 0, 690, 0, 255);
 
   // writes the color values (0-255) to PWM pins
   analogWrite(redLight, redValue);
@@ -54,10 +54,10 @@ void loop() {
   analogWrite(blueLight, blueValue);
 
   // prints color values to serial
-  Serial.println('r');
   Serial.print(redValue);
-  Serial.println('g');
+  Serial.print("r ");
   Serial.print(greenValue);
-  Serial.println('b');
+  Serial.print("g ");
   Serial.print(blueValue);
+  Serial.println("b ");
 }
